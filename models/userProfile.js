@@ -46,7 +46,7 @@ UserProfile.init(
                 beforeCreate: async (newUserData) => {
                     newUserData.password = await bcrypt.hash(newUserData.password, 12);
                     return newUserData;
-                },// do we need an integer value here?
+                },
             },
             sequelize,
             freezeTableName: true,
