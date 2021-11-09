@@ -25,3 +25,11 @@ router.post('/',async (req, res) => {
         res.status(400).json(err);
     }
 });
+
+//GET Spoonacular API call
+
+//GET community cookbook call
+
+//POST to community cookbook
+
+//POST to user saved recipes

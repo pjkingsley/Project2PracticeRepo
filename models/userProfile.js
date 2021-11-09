@@ -39,7 +39,11 @@ UserProfile.init(
                     len: [7],
                 },
             },
-
+        savedRecipes: {
+            type: DataTypes.INTEGER,
+            allowNull: true,
+            isCommunity: false,
+        }
         },
         {
             hooks: {
