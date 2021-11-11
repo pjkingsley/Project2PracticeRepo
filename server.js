@@ -34,6 +34,12 @@ const hbs = exphbs.create({ helpers });
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
+//Allows express to use json function
+app.use(express.json());
+
+//Allows express to use url encoded
+app.use(express.urlencoded({ extended: true}));
+
 //Needs definition
 app.use(express.static(path.join(__dirname, 'public')));
 

@@ -55,7 +55,7 @@ UserProfile.init(
             sequelize,
             freezeTableName: true,
             underscored: true,
-            modelName: 'UserProfile',
+            modelName: 'users',
         }
 );
 
