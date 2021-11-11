@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS foodless_db;
+CREATE DATABASE foodless_db;

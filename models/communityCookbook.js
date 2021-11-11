@@ -1,7 +1,7 @@
 //recipes that the community adds
 
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../congig/connection");
+const sequelize = require("../config/connection");
 
 class CommunityRecipes extends Model {}
 

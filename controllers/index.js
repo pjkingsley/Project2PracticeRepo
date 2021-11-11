@@ -1,10 +1,21 @@
 //Routes here to transfer from database to index.
-const express = require('express');
+//Initialize Router
+const router = require('express').Router();
 
-const Port = 3001;
-const app = express();
+//Connect to /api/index.js
+const apiRoutes = require('./api');
 
-app.get('/', (req,res) => {
-    res.send(
-    );
-});
+//Connect to homeRoutes
+const homeRoutes = require('./homeRoutes.js');
+
+//Allow router to use api and homeRoutes
+router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
+
+//Export for server use
+module.exports = router;
+
+//app.get('/', (req,res) => {
+//    res.send(
+//    );
+//});

@@ -1,8 +1,8 @@
 //This is the individual user profile that will be run through bcrypt for storage in the database
 
-const {Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('../config/connection');
-const swquelize = require('../config/connection');
+const sequelize = require('../config/connection');
 
 class UserProfile extends Model{
     checkPassword(loginPw) {

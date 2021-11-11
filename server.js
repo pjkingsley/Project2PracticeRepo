@@ -1,16 +1,51 @@
-const path = require("path");
+const path = require("path");//I need to look this up
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
-const routes = require("./controllers");
-const helpers = require("./utils/helpers");
+const routes = require("./controllers");//imports our router
+const helpers = require("./utils/helpers.js");//I need to look this up
+const sequelize = require("./config/connection");//imports connection.js
+//const router = require("./controllers/api");--not sure this is nessissary with routes already connected
+const SequelizeStore = require("connect-session-sequelize")(session.Store);//imports Sequelize Store
 
-const sequelize = require("./config/connection");
-
+//Sets up the Express App
+const app = express();
 const PORT = process.env.PORT || 3001;
 
-const SequelizeStore = require("connect-session-sequelize")(session.Store);
+//Set up sessions with cookies
+const sess = {
+     secret: 'whatevers clever',
+     cookie: {
+         maxAge:  864000,
+     },
+     resave: false,
+     saveUninitialized: true,
+     store: new SequelizeStore({
+         db: sequelize,
+     }),
+};
 
-const app = express();
+//Allows express to use session cookies
+app.use(session(sess));
 
-app.use(express.static("public"));
+// Set Handlebars as the default template engine.
+const hbs = exphbs.create({ helpers });
+
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
+//Needs definition
+app.use(express.static(path.join(__dirname, 'public')));
+
+//Allow express to use /controllers/index.js
+app.use(routes);
+
+//Allows express to use controllers folder
+app.use(require('./controllers'));
+
+//Starts the server to begin listening
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => {
+        console.log('Server listening on: http://localhost:'+ PORT);
+    });
+});

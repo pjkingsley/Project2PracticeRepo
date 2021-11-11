@@ -1,6 +1,6 @@
 //model to store recipes in format of api call to spoonacular with title, image and api call route.
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../congig/connection");
+const sequelize = require("../config/connection");
 
 class Recipe extends Model {}
 

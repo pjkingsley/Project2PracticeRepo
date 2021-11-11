@@ -26,6 +26,7 @@ router.post('/',async (req, res) => {
     }
 });
 
+module.exports = router;
 //GET Spoonacular API call
 
 //GET community cookbook call
