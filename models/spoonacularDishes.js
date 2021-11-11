@@ -13,7 +13,7 @@ Recipe.init(
       aitoIncriment: true,
     },
     recipe: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     DESCRIPTION: {
