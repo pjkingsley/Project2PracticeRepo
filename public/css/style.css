@@ -8,6 +8,7 @@
     --blk: #000;
     --lt-grey:rgb(180, 180, 180);
     --test: rgb(184, 149, 125);
+    --display-font:'Fredericka the Great', cursive;
 }
 
 #title{
@@ -38,7 +39,7 @@ text-align: center;
 }
 
 .webpage-title{
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var( --display-font);
     color: var(--white);
     transform: translate(-70px, 0px);
 }
@@ -100,7 +101,7 @@ footer{
     transform: translate(-25px, -50px);
 }
 #btnControl{
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var( --display-font);
 }
 
 .hide {
@@ -122,7 +123,7 @@ footer{
     color: var(--white); 
     text-align: center;    
     padding-top: 2%;
-    font-family: 'Fredericka the Great', cursive;
+    font-family: var( --display-font);
     font-size: 3.5em;
   }
 
@@ -131,14 +132,46 @@ footer{
       text-align: center;
       padding:5%;
   }
-#Donate-header{
-    font-family: 'Fredericka the Great', cursive;
+ #Donate-header{
+    font-family: var( --display-font);
     font-size: 2.5em;
 }
-  ul {
+  #donate-list, .donate-list{
     list-style-type: none;
-  }
-  a{
     color:var(--lt-orange)
   }
- 
+/*-------------------Recipe Cards---------------------*/
+#card-container{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top:3%;
+    padding-bottom:3%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color:var(--dp-red)
+}
+.card{
+    background-color: var(--white);
+    margin-left:2%;
+    margin-right:2%;
+    border-radius: 10px;
+    border-width:1px;
+    border-style:solid;
+    text-align: center;
+    padding: 2%;
+}
+.card header{
+    background-color: var(--dp-green);
+    border-radius: 4px;
+    border-width:1px;
+    border-style:solid;
+    color: var(--white);
+    font-family: var( --display-font);
+    font-size: 1.5em;
+    letter-spacing: .09em;
+}
+.card img {
+    max-width: 250px;
+    border-radius: 4px;
+    margin:1%;
+}

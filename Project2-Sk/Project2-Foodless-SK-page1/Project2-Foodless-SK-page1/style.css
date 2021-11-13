@@ -1,15 +1,14 @@
 /* Declaring global CSS variables using root */
 :root{
-    --brown: #540908;
-    --dr-orange:#c2380a;
+    --dp-red: #540908;
+    --dp-orange:#c2380a;
     --lt-orange:#f26513;
     --lt-green:#376630;
-    --dr-green:#0f2910;
+    --dp-green:#0f2910;
     --white:#FFFFFF;
     --black:#000000;
 }
 
-*{margin:0; padding:0}
 body{
     background-color:var(--white);
     padding: 30vh;
@@ -21,7 +20,7 @@ body{
     padding: 20px 100px;
     background-color: var(--white);
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 var(--black);
+    box-shadow: 0 0 10px 0 var(--blk);
     margin:auto;
 }
 
