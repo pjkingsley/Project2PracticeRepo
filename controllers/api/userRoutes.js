@@ -74,7 +74,7 @@ router.post('/',async (req, res) => {
 
 //GET community cookbook call
 
-//POST to community cookbook
+//community
 
 //POST to user saved recipes
 

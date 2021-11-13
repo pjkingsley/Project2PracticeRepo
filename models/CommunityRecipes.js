@@ -11,16 +11,26 @@ CommunityRecipes.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      aitoIncriment: true,
+      autoIncrement: true,
     },
-    recipe: {
+    title: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    DESCRIPTION: {
-      TYPE: DataTypes.TEXT,
+    description: {
+      type: DataTypes.TEXT,
       allowNull: true,
     },
+    ingredients:{
+      []
+
+    },
+
+    instructions:{},
+    image:{},
+    author:{},
+}
+
   },
  
   {

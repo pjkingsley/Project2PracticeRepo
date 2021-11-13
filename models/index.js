@@ -1,6 +1,6 @@
 //Set dependencies for export
 const User = require('./userProfile');
-const communityCookbook = require('./communityCookbook');
+const communityCookbook = require('./CommunityRecipes');
 const spoonacularDishes = require('./spoonacularDishes');
 
 module.exports = { User };
