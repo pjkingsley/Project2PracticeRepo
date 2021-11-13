@@ -1,0 +1,102 @@
+/* Declaring global CSS variables using root */
+:root{
+    --brown: #540908;
+    --dr-orange:#c2380a;
+    --lt-orange:#f26513;
+    --lt-green:#376630;
+    --dr-green:#0f2910;
+    --white:#FFFFFF;
+    --black:#000000;
+}
+
+*{margin:0; padding:0}
+body{
+    background-color:var(--white);
+    padding-top: 25vh;
+}
+
+.form-container{
+    width:375px;
+    height: auto;
+    padding: 20px 120px;
+    background-color: var(--white);
+    border-radius:10px;
+   box-shadow: 0 0 10px 0 var(--black);
+    margin: auto;
+ }
+
+ul.list{
+    list-style-type: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+ul.list li{
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+ul.list li input{
+    width: 375px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+#button1 {
+    width: 80px;
+    background-color: var(--lt-orange);
+    color: var(--white);
+    margin-left: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#button2 {
+    width: 80px;
+    background-color: var(--lt-orange);
+    color: var(--white);
+    margin-left: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#button3 {
+    width: 80px;
+    background-color: var(--lt-orange);
+    color: var(--white);
+    margin-left:15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+#submitrecipe{
+    width: 150px;
+    background-color: var(--lt-orange);
+    color: var(--white);
+    border-radius: 20px;
+    font-weight: bold;
+    margin-left: 76px;
+    margin-top: 20px;
+}
+
+#ingredients{
+    margin-left: 40px;
+    font-weight: bold;
+}
+
+#header{
+    margin-left: 20px;
+}
+
+#buttons{
+    margin-left: 28px;
+}
+
+#instructions{
+    margin-left: 35px;
+}
+
+#image{
+    margin-left: 35px; 
+}
+

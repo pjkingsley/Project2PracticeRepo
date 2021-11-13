@@ -1,0 +1,72 @@
+/* Declaring global CSS variables using root */
+:root{
+    --brown: #540908;
+    --dr-orange:#c2380a;
+    --lt-orange:#f26513;
+    --lt-green:#376630;
+    --dr-green:#0f2910;
+    --white:#FFFFFF;
+    --black:#000000;
+}
+
+*{margin:0; padding:0}
+body{
+    background-color:var(--white);
+    padding: 30vh;
+}
+
+.form-container{
+    width: 250px;
+    height: auto;
+    padding: 20px 100px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 var(--black);
+    margin:auto;
+}
+
+ul.list{
+list-style-type: none;
+text-align: center;
+}
+
+ul.list li{
+width: 250px;
+margin-bottom: 20px;
+}
+
+ul.list li input{
+    width: 250px;
+    text-align: center;
+    padding: 8px 0px;
+    border-radius:5px ;
+   
+}
+
+#login{
+    width: 70px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#signup{
+    width: 70px;
+    margin-left:3px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#account{
+    font-size: 17px;
+}
+
+/* Set the background color of button using input[type="button"] */
+ul.list li input[type="button"] {
+    background-color: var(--lt-orange);
+    color: var(--white);
+}
+
+
+
+
