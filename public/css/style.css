@@ -1,0 +1,131 @@
+:root{
+    --dp-red: #540908;
+    --dp-orange: #C2380A;
+    --lt-orange: #f38342;
+    --lt-green: #376630;
+    --dp-green: #0F2910;
+    --white: #fff;
+    --blk: #000;
+    --lt-grey:rgb(180, 180, 180);
+    --test: rgb(184, 149, 125);
+}
+
+#title{
+background-color: var(--lt-orange);
+padding-left:1%;
+padding-right:1%;
+border-width: 5px;
+border-style: solid;
+border-color:var(--lt-orange);
+border-bottom-color: var(--dp-red);
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+text-align: center;
+}
+#tagline{
+    font-size:.5em;
+    color:var(--white);
+    font-style:oblique;
+    font-family: 'Brush Script MT', cursive;
+    font-size:120%;
+    letter-spacing: 150%;
+}
+#hamburger-icon{
+    float:right;
+    max-width: 60px;
+    transform: translate(-10px, 50px);
+    padding:0px;
+}
+
+.webpage-title{
+    font-family: 'Fredericka the Great', cursive;
+    color: var(--white);
+    transform: translate(-70px, 0px);
+}
+.topnav{
+    line-height: 1.5em;
+    font-size: 2em;
+}
+body, html {
+    height: 100vh;
+    display: block;
+    background-color: var(--white);
+} 
+.home-hero-image {
+    /* "linear-gradient" adds a darken background effect. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/hero-3.jpeg");
+    height: 60%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  /* Place text in the middle of the image */
+  .hero-text, .about-hero-text {
+   text-align: center;
+   position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    border-radius:  5px 25px;
+    padding:15px;
+  }
+
+  #scroll-container {
+    max-width:75%;
+    margin: 0px;
+    padding-left:20%;
+    padding-right:20%;
+    padding-top:2%;
+}
+footer{
+    color:var(--lt-grey);
+    text-align: center;
+    padding:2%;
+}
+
+#form-div{
+    text-align: center;
+    background-color: var(--test);
+    border-radius: 25px;
+    margin-left: 32%;
+    margin-right:32%;
+    padding-top: 5%;
+    padding-bottom:5%;
+    transform: translate( 0px, 100px);
+    color: var(--white);
+}
+#close{
+    float:right;
+    transform: translate(-25px, -50px);
+}
+#btnControl{
+    font-family: 'Fredericka the Great', cursive;
+}
+
+.hide {
+    display: none;
+}
+.about-hero-image {
+    /* "linear-gradient" adds a darken background effect. This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.603)), url("../images/hero-3.jpeg");
+    height: 90%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+#about-us-info{
+     color: var(--white);
+  }
+  #about-us-title{
+    color: var(--white); 
+    text-align: center;    
+    padding-top: 2%;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3.5em;
+  }
+  
