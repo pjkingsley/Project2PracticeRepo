@@ -16,8 +16,8 @@ Recipe.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    DESCRIPTION: {
-      TYPE: DataTypes.TEXT,
+    description: {
+      type: DataTypes.TEXT,
       allowNull: true,
     },
     apiCallRoute: {
