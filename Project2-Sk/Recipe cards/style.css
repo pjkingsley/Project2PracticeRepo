@@ -1,0 +1,30 @@
+.card{
+    width: 155px;
+    height: 220px;
+    padding: 6px 12px;
+    background-color:white;
+    border-style: solid;
+    justify-content: center;
+    align-items: center;
+}
+
+#name{
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    padding: 8px 0px;
+    border: solid 2px;
+    margin-top: 5px;
+}
+
+img{   
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.img-div{
+    margin-top: 10px;
+    width: 150px;
+    height: 150px;
+    border: solid 2px;
+}
