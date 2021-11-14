@@ -21,10 +21,7 @@ CommunityRecipes.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    ingredients:{
-      []
-
-    },
+    ingredients:[{}],
 
     instructions:{},
     image:{},
