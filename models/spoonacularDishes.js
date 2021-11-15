@@ -20,8 +20,8 @@ Recipe.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    apiCallRoute: {
-      type: DataTypes.STRING,
+    spoonacularID: {
+      type: DataTypes.INTEGER,
       allowNull: true,
     },
   },

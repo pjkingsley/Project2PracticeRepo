@@ -1,7 +1,7 @@
 //This is the individual user profile that will be run through bcrypt for storage in the database
 
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('../config/connection');
+const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class UserProfile extends Model{
@@ -9,7 +9,7 @@ class UserProfile extends Model{
         return bcrypt.compareSync(loginPw, this.password);
     }
 }
-
+ 
 UserProfile.init(
     {
         id: {
@@ -55,7 +55,7 @@ UserProfile.init(
             sequelize,
             freezeTableName: true,
             underscored: true,
-            modelName: 'users',
+            modelName: 'UserProfile',
         }
 );
 

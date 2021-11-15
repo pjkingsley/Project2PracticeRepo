@@ -2,9 +2,10 @@
 const router = require('express').Router();
 
 //Imports models
-const { User } = require('../models');
-const { communityCookbook } = require('../models');
+const { UserProfile } = require('../models');
+const { CommunityRecipes } = require('../models');
 const { spoonacularDishes } = require('../models');
 
-
+//buildl home routes, res.render homepage, 
+//
 module.exports = router;

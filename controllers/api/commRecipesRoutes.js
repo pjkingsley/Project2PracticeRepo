@@ -1,5 +1,6 @@
 const router = require("express").Router();
-const CommunityRecipes = require("../../models/CommunityRecipes");
+const { CommunityRecipes } = require("../../models");
+const withAuth = require("../../utils/auth");
 
 
 //post to community cookbook
@@ -24,7 +25,7 @@ router.put("/com_recipes/:id", async (req, res) => {
 });
 
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   try {
     const recipes = await CommunityRecipes.findByPk(req.params.id);
     res.status(200).json(recipes);
