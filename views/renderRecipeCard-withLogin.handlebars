@@ -1,0 +1,9 @@
+{{#if loggedIn}}
+    <div id="card-container">
+        {{#each recipe as |recipe|}}
+        {{> recipe-card-partial}}
+        {{/each}}
+    </div>
+ {{else}}
+    <a href="/login">You must be logged in to view these recipes</a>
+{{/if}}
