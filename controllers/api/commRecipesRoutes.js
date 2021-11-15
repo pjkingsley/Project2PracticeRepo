@@ -16,7 +16,7 @@ router.post("/", async (req, res) => {
 });
 
 //updating community cookbook
-router.put("/com_recipes/:id", async (req, res) => {
+router.put("/com_recipes/:id", withAuth, async (req, res) => {
   try {
     res.status(200).json();
   } catch (err) {
@@ -24,7 +24,7 @@ router.put("/com_recipes/:id", async (req, res) => {
   }
 });
 
-
+//get community cookbook recipes associated with user ID
 router.get("/:id", withAuth, async (req, res) => {
   try {
     const recipes = await CommunityRecipes.findByPk(req.params.id);
