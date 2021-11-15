@@ -6,7 +6,7 @@ const router = require('express').Router();
 const apiRoutes = require('./api');
 
 //Connect to homeRoutes
-const homeRoutes = require('./homeRoutes.js');
+const homeRoutes = require('./homeRoutes');
 
 //Allow router to use api and homeRoutes
 router.use('/', homeRoutes);

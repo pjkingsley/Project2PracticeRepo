@@ -1,5 +1,6 @@
 //Copied from week 13 section 18
 const router = require ('express').Router();
+const withAuth = require("../../utils/auth");
 const { UserProfile } = require ('../../models');
 //This route is /api/users/
 router.post("/", async (req, res) => {
