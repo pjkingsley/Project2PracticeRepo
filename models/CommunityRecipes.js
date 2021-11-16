@@ -23,28 +23,34 @@ CommunityRecipes.init(
     },
     ingredients: {
       type: DataTypes.JSON,
-      allowNull: false
+      allowNull: false,
     },
-    instructions:{
+    instructions: {
       type: DataTypes.TEXT,
-      allowNull: false
+      allowNull: false,
     },
-    image:{
+    image: {
       type: DataTypes.BLOB,
-      allowNull: true
+      allowNull: true,
     },
-    author:{
+    author: {
       type: DataTypes.STRING,
-      allowNull: true
+      allowNull: true,
     },
-},
+    recipe_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "UserProfile",
+        key: "id",
+      },
+    },
+  },
 
- 
-{
-  sequelize,
-  freezeTableName: true,
-  modelName: "CommunityRecipes",
-}
+  {
+    sequelize,
+    freezeTableName: true,
+    modelName: "CommunityRecipes",
+  }
 );
 
 module.exports = CommunityRecipes;
