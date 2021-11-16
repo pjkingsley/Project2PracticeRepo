@@ -1,5 +1,3 @@
-    <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="./public/css/style.css">
-    <title>FoodLess</title>
+    <title>{{title}}</title>
 </head>
 <body>
-<header class="topnav">
+<header class="topnav" id="header">
     <header id="title">
         <h1  class="topnav webpage-title">FoodLess
         </h1>
@@ -31,6 +29,7 @@
                        <li  class="side-bar"><a href="#">About Us</a></li>
                        <li  class="side-bar"><a href="#">Donation Page</a></li>
                        <a class="uk-button uk-button-default saved-recipes-btn " href="#modal-overflow" uk-toggle>Saved Recipes</a>
+
 
                    <!-- below is the modal that comes from the slider menu, that shows saved recipes (the a-tag directly above contains the button)-->
                    <div id="modal-overflow" uk-modal>
@@ -55,34 +54,48 @@
         </div>
        </header>
 </header>
-<!-- --------------test the handlebars code here----------->
-<div class="form-container">
-    <h1 id="header"><u>Recipe Submission Form</u></h1>
-    <ul class="list">
-        <li id="ingredients">Recipe Ingredients(include measurements):</li>
-        <li><input type="text" name="recipeIngredients"></li>
-        <li id="instructions"><strong>Recipe Instructions:</strong></li>
-        <li><input type="text" name="recipeInstructions"></li>
-        <li id ="image"><strong>Add an Image:</strong></li>
-      <div id="buttons"><li><input id="button1" type="button" name="upLoad" value="Upload"> <input id="button2" type="button" name="addUrl" value="Add URL"> <input id="button3" type="button" name="addEmoji" value="Add Emoji"></li></div>            <li><input id="submitrecipe" type="button" name="submitRecipe" value="Submit Recipe!"></li>
-     </ul>
-</div>
+<!-- ------------------------------------------------------------------->
+<section id="community-cookbook-hero">
+    <div>
+        <form id="form">
+           <div id="form-div" class="cookbook-search">
+               <label>Search:</label>
+               <br>
+               <br>
+               <div id="input-ingredients">
+                <input type="text" placeholder="Ingredients" id="food">
+                <ul id="fridge"> 
+                </ul> 
+               </div>
+           </div>
+       </form>
+    </div>
+   </section> 
 
-<!-- --------------end main webpage------------------- -->
+   <div id="card-container">
+    <section class="card">
+        <header>{{recipe.title}}</header>
+        <img class="card-img" src="{{recipe.img}}" alt="image of {{recipe.title}}" />
+    </section>
+    <section class="card">
+        <header>{{recipe.title}}</header>
+        <img class="card-img" src="{{recipe.img}}" alt="image of {{recipe.title}}" />
+    </section>
+    <section class="card">
+        <header>{{recipe.title}}</header>
+        <img class="card-img" src="{{recipe.img}}" alt="image of {{recipe.title}}" />
+    </section>
+ </div>
+ <!-- ------------------------------------------------------------------->
+<div id = "modalBox" class = "modal">
+    <div id = "modal-content"></div>
+</div>
+<a id="footer" href="#header"><p>Back to Top ^</p></a>
 <br>
 <footer>
 <p>Copy Right The New and improved Group 7</p>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.1/dist/js/uikit.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.1/dist/js/uikit-icons.min.js"></script>
-
 </body>
 </html>
-
-<!-----I haven't put in these food banks yet: ---------->
-<!-- 8. https://www.northwestharvest.org/our-work/community-programs/sodo-community-   
-market/
-9. https://nourishpc.org/   
-10. https://edmondsfoodbank.org/   
-11. https://www.marysvillefoodbank.org/   
-12. http://www.mukilteofoodbank.org/    -->

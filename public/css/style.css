@@ -6,7 +6,7 @@
     --dp-green: #0F2910;
     --white: #fff;
     --blk: #000;
-    --lt-grey:rgb(180, 180, 180);
+    --lt-grey:rgb(214, 214, 214);
     --test: rgb(184, 149, 125);
     --display-font:'Fredericka the Great', cursive;
 }
@@ -87,25 +87,26 @@ footer{
 
 #form-div{
     text-align: center;
-    background-color: var(--test);
+    background-color: var(--dp-red);
     border-radius: 25px;
     margin-left: 32%;
     margin-right:32%;
     padding-top: 5%;
-    padding-bottom:5%;
+    padding:2%;
     transform: translate( 0px, 100px);
     color: var(--white);
 }
+#fridge{
+    list-style-type: none;
+    margin:0px !important;
+    padding:0px !important;
+}
 #close{
     float:right;
-    transform: translate(-25px, -50px);
+    transform: translate( 0px, -20px);
 }
 #btnControl{
     font-family: var( --display-font);
-}
-
-.hide {
-    display: none;
 }
 /*-----------About us page-----------------------------*/
 .about-hero-image {
@@ -119,7 +120,7 @@ footer{
 #about-us-info{
      color: var(--white);
   }
-  #about-us-title{
+#about-us-title{
     color: var(--white); 
     text-align: center;    
     padding-top: 2%;
@@ -128,17 +129,38 @@ footer{
   }
 
   /*--------------------donate page--------------------*/
-  #donation-page{
+#donation-page{
       text-align: center;
       padding:5%;
   }
- #Donate-header{
+#Donate-header{
     font-family: var( --display-font);
     font-size: 2.5em;
 }
-  #donate-list, .donate-list{
+#donate-list, .donate-list{
     list-style-type: none;
     color:var(--lt-orange)
+  }
+  .description{
+      background-color: rgb(83, 44, 44);
+      color: var(--white);
+      padding:2%;
+      border-radius:25px;
+      margin-left:15%;
+      margin-right:15%;
+  }
+  /*button next*/
+  #donate-description, #hide-description{
+      font-family: var(--display-font);
+      background-color: var(--white);
+      color: var(--dp-red);
+      margin-top:5%;
+      font-size: 1.1em;
+      border-color: var(--lt-orange);
+  }
+  #donate-description:hover, #hide-description:hover{ 
+      color:var(--white);
+      background-color: rgb(252, 185, 122);
   }
 /*-------------------Recipe Cards---------------------*/
 #card-container{
@@ -174,4 +196,36 @@ footer{
     max-width: 250px;
     border-radius: 4px;
     margin:1%;
+}
+/*-------------- community cookbook page --------------*/
+
+#community-cookbook-hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.203)), url("../images/hero-5.jpeg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .cookbook-search{
+      background-color: var(--dp-green) !important;
+      font-family: var(--display-font);
+      font-size: 1.5em;
+      letter-spacing: .1em;
+      border-style: double;
+      border-width: 7px;
+      border-color: var(--dp-red);
+
+  }
+  /* #community-cookbook-hero{
+    background-color:var(--lt-grey);
+    height: 50%;
+  } */
+  /*-----------------------------------------------------*/
+#footer{
+    text-align: center;
+    color: var(--lt-grey);
+}
+.hide {
+    display: none;
 }
