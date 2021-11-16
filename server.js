@@ -10,7 +10,7 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);//imp
 
 //Sets up the Express App
 const app = express();
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3001;
 
 //Set up sessions with cookies
 const sess = {
