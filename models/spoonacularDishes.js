@@ -24,6 +24,13 @@ SpoonRecipe.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
+    recipe_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "UserProfile",
+        key: "id",
+      },
+    },
   },
   {
     sequelize,

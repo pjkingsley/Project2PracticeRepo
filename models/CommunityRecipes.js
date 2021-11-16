@@ -21,15 +21,31 @@ CommunityRecipes.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    ingredients:[{}],
-
-    instructions:{},
-    image:{},
-    author:{},
-}
-
+    ingredients: {
+      type: DataTypes.JSON,
+      allowNull: false,
+    },
+    instructions: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    image: {
+      type: DataTypes.BLOB,
+      allowNull: true,
+    },
+    author: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    recipe_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "UserProfile",
+        key: "id",
+      },
+    },
   },
- 
+
   {
     sequelize,
     freezeTableName: true,

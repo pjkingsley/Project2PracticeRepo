@@ -1,5 +1,6 @@
 const { SpoonRecipe } = require("../../models");
 const withAuth = require("../../utils/auth");
+const router = require('express').Router();
 
 router.post("/", withAuth, async (req, res) => {
   console.log("spoon recipe favorites", req.body);
@@ -20,3 +21,4 @@ router.get("/:id", withAuth, async (req, res) => {
     res.status(400).json(err);
   }
 });
+module.exports = router;
