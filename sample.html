@@ -55,37 +55,19 @@
        </header>
 </header>
 <!-- ------------------------------------------------------------------->
-<section id="community-cookbook-hero">
-    <div>
-        <form id="form">
-           <div id="form-div" class="cookbook-search">
-               <label>Search:</label>
-               <br>
-               <br>
-               <div id="input-ingredients">
-                <input type="text" placeholder="Ingredients" id="food">
-                <ul id="fridge"> 
-                </ul> 
-               </div>
-           </div>
-       </form>
-    </div>
-   </section> 
 
-   <div id="card-container">
-    <section class="card">
-        <header>{{recipe.title}}</header>
-        <img class="card-img" src="{{recipe.img}}" alt="image of {{recipe.title}}" />
-    </section>
-    <section class="card">
-        <header>{{recipe.title}}</header>
-        <img class="card-img" src="{{recipe.img}}" alt="image of {{recipe.title}}" />
-    </section>
-    <section class="card">
-        <header>{{recipe.title}}</header>
-        <img class="card-img" src="{{recipe.img}}" alt="image of {{recipe.title}}" />
-    </section>
- </div>
+ <div class="form-container">
+    <ul class="list">
+        <li><strong>Email:</strong></li>
+        <li><input type="text" name="User Email" placeholder="User Email"> </li>
+        <li><strong>Password:</strong></li>
+        <li><input type="text" name="User Password" placeholder="..............."></li>
+        <li><strong>Confirm Password:</strong></li>
+        <li><input type="text" name="User Password" placeholder="..............."></li>
+        <li><input  id="signup" type="button" name="Sign up" value="Sign up!"></li>
+        <li id="account">Already have an account? <input id="login" type="button" name="Log in" value="Log in"></li>
+    </ul>
+</div>
  <!-- ------------------------------------------------------------------->
 <div id = "modalBox" class = "modal">
     <div id = "modal-content"></div>

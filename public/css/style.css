@@ -214,14 +214,49 @@ footer{
       letter-spacing: .1em;
       border-style: double;
       border-width: 7px;
-      border-color: var(--dp-red);
+      border-color: var(--white);
 
   }
   /* #community-cookbook-hero{
     background-color:var(--lt-grey);
     height: 50%;
   } */
-  /*-----------------------------------------------------*/
+  /*---------------------GENERAL FORMS--------------------------------*/
+
+ .form-container{
+     background-color:var(--lt-grey);
+     border-radius: 10px;
+     box-shadow: 0 0 10px 0 var(--black);
+     margin-left:30%;
+     margin-right:30%;
+     margin-top:2%;
+     padding:2%;
+     text-align: center;
+ }
+ .list{
+    padding:2%;
+    list-style-type: none;
+    color: var(--dp-red);
+ }
+
+#login, #signup{
+    font-family: var(--display-font);
+    background-color: var(--white);
+    color: var(--blk);
+    margin-top:5%;
+    font-size: 1.1em;
+    border-color: var(--lt-orange);
+    border-radius: 10px;
+}
+#login{
+    background-color: var(--lt-grey);
+}
+
+#login:hover, #signup:hover{ 
+    color:var(--white);
+    background-color: rgb(252, 185, 122);
+}
+  /*-------------------------------------------------------------------*/
 #footer{
     text-align: center;
     color: var(--lt-grey);
