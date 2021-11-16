@@ -14,6 +14,8 @@ const loginFormHandler = async (event) => {
 
       if (response.ok){
       console.log("login success");
+      //getElementById(hamburger button display)
+      //getElementByID(display logout button)
     } else {
         alert(response.statusText);
     }

@@ -1,13 +1,17 @@
+const { response } = require('express');
+
 //Imports express router
 const router = require('express').Router();
+router.get('/', async (req, res) => {
+  try {
+  
+    res.render('homepage');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
-//Imports models
-const { UserProfile } = require('../models');
-const { CommunityRecipes } = require('../models');
-const { SpoonRecipe } = require('../models');
 
-//buildl home routes, res.render homepage, 
 
-//res.render('homepage',{if database information is to be displayed on homepage, put here})
-//
+
 module.exports = router;
