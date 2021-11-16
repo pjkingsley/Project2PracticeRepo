@@ -21,20 +21,30 @@ CommunityRecipes.init(
       type: DataTypes.TEXT,
       allowNull: true,
     },
-    ingredients:[{}],
+    ingredients: {
+      type: DataTypes.JSON,
+      allowNull: false
+    },
+    instructions:{
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    image:{
+      type: DataTypes.BLOB,
+      allowNull: true
+    },
+    author:{
+      type: DataTypes.STRING,
+      allowNull: true
+    },
+},
 
-    instructions:{},
-    image:{},
-    author:{},
-}
-
-  },
  
-  {
-    sequelize,
-    freezeTableName: true,
-    modelName: "CommunityRecipes",
-  }
+{
+  sequelize,
+  freezeTableName: true,
+  modelName: "CommunityRecipes",
+}
 );
 
 module.exports = CommunityRecipes;
