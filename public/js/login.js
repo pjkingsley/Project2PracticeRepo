@@ -2,8 +2,8 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const email = document.querySelector("#email-login").value.trim();
-  const password = document.querySelector("#password-login").value.trim();
+  const email = document.querySelector("#User Email").value.trim();
+  const password = document.querySelector("#User Password").value.trim();
 //from profile.js mini project
   if (email && password) {
     // Send a POST request to the API endpoint
@@ -21,6 +21,10 @@ const loginFormHandler = async (event) => {
     }
     };
 }
+
+document
+  .querySelector("#login")
+  .addEventListener("click", loginFormHandler);
 
 
 //     What do we want to display when user logs in?
