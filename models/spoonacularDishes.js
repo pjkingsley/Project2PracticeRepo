@@ -24,7 +24,7 @@ SpoonRecipe.init(
       type: DataTypes.INTEGER,
       allowNull: true,
     },
-    recipe_id: {
+    user_reference: {
       type: DataTypes.INTEGER,
       references: {
         model: "UserProfile",
