@@ -37,7 +37,7 @@ CommunityRecipes.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    recipe_id: {
+    user_reference: {
       type: DataTypes.INTEGER,
       references: {
         model: "UserProfile",
