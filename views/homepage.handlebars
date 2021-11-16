@@ -1,46 +1,50 @@
 
-<section class="hero home-hero-image ">
-    <button class="uk-button uk-button-secondary uk-button-large get-started-btn hero-text" id="btnControl">Let's Get Started!
-    </button> 
-
-    <!-- this is the form with the class hide that shows when you press the button above-->
-    <div class="form-container container hide" id="show-form">
-        <form id="form">
-           <div id="form-div">
-               <p id="close">X</p>
-               <label>List any ingredients you have here (Proteins, vegetables, fruits, etc.):</label>
-               <br>
-               <br>
-               <input type="text" placeholder="Ingredients" id="food">
-               <ul id="fridge"> 
-               </ul> 
-           </div>
-       </form>
-    </div>
-   </section> 
-   
-   <div id="scroll-container">
-    <div class="uk-position-relative uk-light" uk-slideshow>
-       <ul class="uk-slideshow-items">
-           
-           <li>
-               <a class="slider-img-1" href="https://www.delish.com/cooking/recipe-ideas/a28576182/crustless-pumpkin-pie-recipe/"><img src="./public/images/hero-2.jpeg" alt="Pumpkin Pie Recipe" uk-cover></a>
-           </li>
-           <li>
-               <a class="slider-img-2" href="https://www.taste.com.au/recipes/creamy-coconut-beef-pumpkin-curry/68unnsyi?r=entertaining/gp2i87q7"><img src="./public/images/hero-4.jpeg" alt="recipe image" uk-cover></a>
-           </li>
-           <li>
-               <a><img src="./public/images/Hero-5.jpeg" alt="" uk-cover></a>
-           </li>
-       </ul>
-       <!-- these below are the dots at the bottom of the slider to navagate the images -->
-        <div class="uk-position-bottom-center uk-position-small">
-           <ul class="uk-dotnav">
-               <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
-               <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
-               <li uk-slideshow-item="2"><a href="#">Item 3</a></li>
+    <section class="hero home-hero-image ">
+        <button class="uk-button uk-button-secondary uk-button-large get-started-btn hero-text" id="btnControl">Let's Get Started!
+        </button> 
+    
+        <!-- this is the form with the class hide that shows when you press the button above-->
+        <div class="form-container container hide" id="show-form">
+            <form id="form">
+               <div id="form-div">
+                   <p id="close">X</p>
+                   <label>List any ingredients you have here (Proteins, vegetables, fruits, etc.):</label>
+                   <br>
+                   <br>
+                   <div id="input-ingredients">
+                    <input type="text" placeholder="Ingredients" id="food">
+                    <ul id="fridge"> 
+                    </ul> 
+                   </div>
+               </div>
+           </form>
+        </div>
+       </section> 
+       
+       <div id="scroll-container">
+        <div class="uk-position-relative uk-light" uk-slideshow>
+           <ul class="uk-slideshow-items">
+               
+               <li>
+                   <a class="slider-img-1" href="https://www.delish.com/cooking/recipe-ideas/a28576182/crustless-pumpkin-pie-recipe/"><img src="./images/hero-2.jpeg" alt="Pumpkin Pie Recipe" uk-cover></a>
+               </li>
+               <li>
+                   <a class="slider-img-2" href="https://www.taste.com.au/recipes/creamy-coconut-beef-pumpkin-curry/68unnsyi?r=entertaining/gp2i87q7"><img src=".images/hero-4.jpeg" alt="recipe image" uk-cover></a>
+               </li>
+               <li>
+                   <a><img src="./images/Hero-5.jpeg" alt="" uk-cover></a>
+               </li>
            </ul>
+           <!-- these below are the dots at the bottom of the slider to navagate the images -->
+            <div class="uk-position-bottom-center uk-position-small">
+               <ul class="uk-dotnav">
+                   <li uk-slideshow-item="0"><a href="#">Item 1</a></li>
+                   <li uk-slideshow-item="1"><a href="#">Item 2</a></li>
+                   <li uk-slideshow-item="2"><a href="#">Item 3</a></li>
+               </ul>
+           </div>
        </div>
-   </div>
-</div> 
-<script src="./public/js/basic.js"></script>
+    </div> 
+    <script src="./js/homepage-basic.js"></script>
+    
+    
