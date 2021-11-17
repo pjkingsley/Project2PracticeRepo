@@ -4,7 +4,7 @@ const router = require ('express').Router();
 const withAuth = require("../../utils/auth");
 const { UserProfile } = require ('../../models');
 //This route is /api/users/
-router.post("/", async (req, res) => {
+router.post("/profile", async (req, res) => {
   console.log("made it to the userProfile server")
   try {
     const userProfileData = await UserProfile.create(

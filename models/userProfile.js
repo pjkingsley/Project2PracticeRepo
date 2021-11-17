@@ -36,7 +36,7 @@ UserProfile.init(
                 },
             },
             passwordConfirm: {
-                type: DataTypes.String,
+                type: DataTypes.STRING,
                  allowNull: false,
                 validate: {
                     len: [7],
