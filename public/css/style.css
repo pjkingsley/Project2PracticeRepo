@@ -174,8 +174,7 @@ footer{
 }
 .card{
     background-color: var(--white);
-    margin-left:2%;
-    margin-right:2%;
+    margin: 2%;
     border-radius: 10px;
     border-width:1px;
     border-style:solid;
@@ -266,10 +265,70 @@ color:var(--white);
 background-color: var(--dp-red);
 }
 /*-----------------------------------------------------*/
+#footer-container{
+    margin-top:4%;
+}
 #footer{
     text-align: center;
     color: var(--lt-grey);
 }
 .hide {
     display: none;
+}
+
+/*---------------------------page size flexibility */
+
+@media screen and (max-width: 1200px) {
+    .form-container{
+        margin-left:15%;
+        margin-right:15%;
+    }
+    #card-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #tagline{
+        font-size: 0px;
+    }
+    .webpage-title{
+        font-family: var( --display-font);
+        color: var(--white);
+        transform: translate( 0px, 0px);
+    }
+    #form-div{
+        margin-left: 22%;
+        margin-right:22%;
+        padding-top: 5%;
+    }
+    #scroll-container {
+        padding-left:10%;
+        padding-right:10%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .form-container{
+        margin-left:5%;
+        margin-right:5%;
+    }
+    #card-container{
+        padding-left: 5%;
+        padding-right: 5%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .webpage-title{
+        transform: translate( 50px, 0px);
+    }
+    #form-div{
+        margin-left: 10%;
+        margin-right:10%;
+        padding-top: 5%;
+    }
+    #scroll-container {
+        padding-left:5%;
+        padding-right:5%;
+    }
+
 }
