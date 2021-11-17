@@ -1,8 +1,8 @@
 // const renderLogin = document.location.replace("/profile");
 
-document
-  .getElementById("log")
-  .addEventListener("click", res.render("/profile"));
+// document
+//   .getElementById("log")
+//   .addEventListener("click", res.render("/profile"));
 
 const loginFormHandler = async (event) => {
   event.preventDefault();

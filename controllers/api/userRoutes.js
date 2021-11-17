@@ -1,11 +1,14 @@
-//Copied from week 13 section 18
+
 const router = require ('express').Router();
 const withAuth = require("../../utils/auth");
 const { UserProfile } = require ('../../models');
 //This route is /api/users/
 router.post("/", async (req, res) => {
   try {
-    const userProfileData = await UserProfile.create(req.body);
+    // const userProfileData = await UserProfile.create(
+    //   email: req.body.email,
+    //   password: req.body.password,
+    //   );
 
     req.session.save(() => {
       req.session.userProfile_id = userProfileData.id;
