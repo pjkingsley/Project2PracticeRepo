@@ -159,7 +159,7 @@
                                      gotRecipes.innerHTML = '';
                                      savedRecipes.appendChild(cardImage);
                                      modalContent.innerHTML = '';
-                                     cardModal.style.display = 'none';
+                                     cardModal.style.display = '';
                                  });
                                  console.log(modalContent);
                                  

@@ -8,8 +8,8 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const email = document.querySelector("#User Email").value.trim();
-  const password = document.querySelector("#User Password").value.trim();
+  const email = document.querySelector("#userEmail").value.trim();
+  const password = document.querySelector("#userPassword").value.trim();
   //from profile.js mini project
   if (email && password) {
     // Send a POST request to the API endpoint
