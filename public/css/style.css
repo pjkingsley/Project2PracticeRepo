@@ -239,7 +239,7 @@ footer{
     color: var(--dp-red);
  }
 
-#login, #signup{
+#login, #signup, #button1, #button2, #button3,#submitrecipe{
     font-family: var(--display-font);
     background-color: var(--white);
     color: var(--blk);
@@ -248,15 +248,24 @@ footer{
     border-color: var(--lt-orange);
     border-radius: 10px;
 }
-#login{
-    background-color: var(--lt-grey);
-}
 
-#login:hover, #signup:hover{ 
+#login:hover, #signup:hover,#button1:hover, #button2:hover, #button3:hover,#submitrecipe:hover{ 
     color:var(--white);
     background-color: rgb(252, 185, 122);
 }
-  /*-------------------------------------------------------------------*/
+#recipe-submit-header{
+    font-family: var(--display-font);
+    color: var(--dp-red);
+}
+#button1, #button2, #button3{
+    background-color: var(--lt-grey);
+}
+
+#submitrecipe{
+color:var(--white);
+background-color: var(--dp-red);
+}
+/*-----------------------------------------------------*/
 #footer{
     text-align: center;
     color: var(--lt-grey);
