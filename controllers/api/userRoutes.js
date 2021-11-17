@@ -1,21 +1,22 @@
+console.log("check 2")
 
 const router = require ('express').Router();
 const withAuth = require("../../utils/auth");
 const { UserProfile } = require ('../../models');
 //This route is /api/users/
 router.post("/", async (req, res) => {
+  console.log("made it to the userProfile server")
   try {
-    // const userProfileData = await UserProfile.create(
-    //   email: req.body.email,
-    //   password: req.body.password,
-    //   );
+    const userProfileData = await UserProfile.create(
+      req.body
+      );
 
-    req.session.save(() => {
-      req.session.userProfile_id = userProfileData.id;
-      req.session.logged_in = true;
+    // req.session.save(() => {
+    //   req.session.userProfile_id = userProfileData.id;
+    //   req.session.logged_in = true;
 
       res.status(200).json(userProfileData);
-    });
+    
   } catch (err) {
     res.status(400).json(err);
   }

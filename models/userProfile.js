@@ -18,11 +18,7 @@ UserProfile.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: true,
-
-        },
+       
         email: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -39,20 +35,21 @@ UserProfile.init(
                     len: [7],
                 },
             },
-            // passwordConfirm: {
-            //     type: DataTypes.String,
-            //      allowNull: false,
-            //     validate: {
-            //         len: [7],
+            passwordConfirm: {
+                type: DataTypes.String,
+                 allowNull: false,
+                validate: {
+                    len: [7],
 
-            // },
-        // },
+            },
+        },
         savedRecipes: {
             type: DataTypes.INTEGER,
             allowNull: true,
             isCommunity: false,
-        }
         },
+    },
+        
         {
             hooks: {
                 beforeCreate: async (newUserData) => {
@@ -65,7 +62,7 @@ UserProfile.init(
             underscored: true,
             modelName: 'UserProfile',
         }
-);
+    );
 
 module.exports = UserProfile;
 

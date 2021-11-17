@@ -12,10 +12,12 @@ console.log(event);
     .value.trim();
 console.log(passwordConfirm)
   if (email && password && passwordConfirm) {
-    const response = await fetch("/api/users/", {
+    const response = await fetch("/controllers/api/users/", {
       method: "POST",
       body: JSON.stringify({ email, password, passwordConfirm }),
+      
     });
+ 
     if (response.ok) {
       alert("User Profile Created. Welcome to the Community.");
     } else {
