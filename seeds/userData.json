@@ -1,0 +1,8 @@
+[
+    {
+        "name": "Joe Shmoe",
+        "email": "shmoe@joe.com",
+        "password": "Password12345",
+        "savedRecipes": "1, 2, 3"
+    }
+]
