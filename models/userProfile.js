@@ -39,6 +39,14 @@ UserProfile.init(
                     len: [7],
                 },
             },
+            // passwordConfirm: {
+            //     type: DataTypes.String,
+            //      allowNull: false,
+            //     validate: {
+            //         len: [7],
+
+            // },
+        // },
         savedRecipes: {
             type: DataTypes.INTEGER,
             allowNull: true,

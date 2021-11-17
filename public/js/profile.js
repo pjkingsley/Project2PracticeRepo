@@ -1,14 +1,16 @@
-const { UserProfile } = require("../../models");
+// const { UserProfile } = require("../../models");
 
 const createUserProfile = async (event) => {
   event.preventDefault();
-
-  const email = document.querySelector("User Email").value.trim();
-  const password = document.querySelector("User Password").value.trim();
+console.log(event);
+  const email = document.querySelector("#userEmail").value.trim();
+  console.log(email)
+  const password = document.querySelector("#UserPassword").value.trim();
+  console.log(password)
   const passwordConfirm = document
-    .querySelector("User Password Confirm")
+    .querySelector("#passwordConfirm")
     .value.trim();
-
+console.log(passwordConfirm)
   if (email && password && passwordConfirm) {
     const response = await fetch("/api/users/", {
       method: "POST",
