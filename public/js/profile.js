@@ -17,7 +17,9 @@ const createUserProfile = async (event) => {
       body: JSON.stringify({ email, password, passwordConfirm }),
     });
 
-    if (response.ok) {
+    
+
+    https: if (response.ok) {
       alert("User Profile Created. Welcome to the Community.");
     } else {
       alert("Failed to create user account");
