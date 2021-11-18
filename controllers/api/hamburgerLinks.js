@@ -1,11 +1,13 @@
-//homepage link
-router.get("/homepage", async (req, res) => {
-  try {
-    res.render("homepage");
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+const router = require("express").Router();
+
+// //homepage link
+// router.get("/homepage", async (req, res) => {
+//   try {
+//     res.render("homepage");
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 //CommunityCookbook link
 router.get("/communityCookbook", async (req, res) => {
@@ -42,3 +44,4 @@ router.get("/donations", async (req, res) => {
     res.status(500).json(err);
   }
 });
+module.exports = router;
