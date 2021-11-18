@@ -19,9 +19,9 @@ router.get("/communityCookbook", async (req, res) => {
 });
 
 //Submit a Recipe link
-router.get("/recipeSubmit", async (req, res) => {
+router.get("/submitRecipe", async (req, res) => {
   try {
-    res.render("renderRecipeCard");
+    res.render("renderRecipeCard-noLogin.handlebars");
   } catch (err) {
     res.status(500).json(err);
   }
