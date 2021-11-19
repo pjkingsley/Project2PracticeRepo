@@ -36,14 +36,7 @@ UserProfile.init(
                     len: [7],
                 },
             },
-            password_confirm: {
-                type: DataTypes.STRING,
-                 allowNull: false,
-                validate: {
-                    len: [7],
-
-            },
-        },
+         
         saved_recipes: {
             type: DataTypes.INTEGER,
             allowNull: true,
