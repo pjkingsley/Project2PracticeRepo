@@ -5,7 +5,8 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 class UserProfile extends Model{
-    checkPassword(loginPw) {
+checkPassword(loginPw) {
+    console.log(loginPw, this.password, "UserProfile check")
         return bcrypt.compareSync(loginPw, this.password);
     }
 }
@@ -35,15 +36,8 @@ UserProfile.init(
                     len: [7],
                 },
             },
-            passwordConfirm: {
-                type: DataTypes.STRING,
-                 allowNull: false,
-                validate: {
-                    len: [7],
-
-            },
-        },
-        savedRecipes: {
+         
+        saved_recipes: {
             type: DataTypes.INTEGER,
             allowNull: true,
             isCommunity: false,

@@ -7,19 +7,22 @@ const createUserProfile = async (event) => {
   console.log(email);
   const password = document.querySelector("#userPassword").value.trim();
   console.log(password);
-  const passwordConfirm = document
+  const password_confirm = document
     .querySelector("#passwordConfirm")
     .value.trim();
-  console.log(passwordConfirm);
-  if (email && password && passwordConfirm) {
+  console.log(password_confirm);
+if (email && password && password_confirm) {
+    console.log("anyString")
     const response = await fetch("/api/users/profile", {
       method: "POST",
-      body: JSON.stringify({ email, password, passwordConfirm }),
+      body: JSON.stringify({ email, password, password_confirm }),
+      headers: {
+        'Content-Type': 'application/json',}
     });
 
     
 
-    https: if (response.ok) {
+     if (response.ok) {
       alert("User Profile Created. Welcome to the Community.");
     } else {
       alert("Failed to create user account");
