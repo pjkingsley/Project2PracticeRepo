@@ -18,10 +18,20 @@ router.get("/communityCookbook", async (req, res) => {
   }
 });
 
-//Submit a Recipe link
+// Recipe link, no login
 router.get("/submitRecipe", async (req, res) => {
   try {
-    res.render("renderRecipeCard-noLogin.handlebars");
+    res.render("renderRecipeCard-noLogin");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get("/RecipeLogged", async (req, res) => {
+  try {
+    res.render("renderRecipeCard-withLogin", {
+      loggedIn: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }

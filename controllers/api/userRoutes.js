@@ -22,9 +22,9 @@ router.post("/profile", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
-    console.log("try of router.post(/login) reached)");
+    console.log("router.post(/login))");
     const userProfileData = await UserProfile.findOne({
-      where: {email: req.body.email } 
+      where: {email : req.body.email}
     });
 
     if (!userProfileData) {
@@ -52,6 +52,8 @@ router.post("/login", async (req, res) => {
         user: userProfileData,
         message: "You are now logged in!",
       });
+
+      // res.redirect("/api/u/RecipeLogged");
     });
   } catch (err) {
     res.status(400).json(err);
@@ -79,7 +81,7 @@ router.post("/", async (req, res) => {
     res.status(400).json(err);
   }
 });
-router.get("/signup", async (req, res) => {
+router.get("/signup1", async (req, res) => {
   try {
     res.render("signup");
   } catch (err) {

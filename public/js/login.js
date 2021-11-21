@@ -17,7 +17,10 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       console.log("login success");
+    location.href= ("http://localhost:3001/api/u/RecipeLogged");
+      
     } else {
+      console.log(response)
       alert(response.statusText);
     }
   }

@@ -35,11 +35,19 @@
 
                        <li  class="side-bar"><a href= "/api/u/donations">Donation Page</a></li>
 
-                       <li class="side-bar"><a id="log"
-                       href= "/api/users/signup">Create User Profile</a></li>
+                     
+                      {{#if loggedIn}}
+                      <li class ="side-bar">
+                          <a href= "/api/users/logout">Logout</a>
+                      </li>
+   
+                    {{else}}
+               
+                      <li class="side-bar"><a href= "/api/users/signup1">Create User Profile</a></li>
 
                        <li class="side-bar"><a 
                        href= "/api/users/loginpage">Login</a></li>
+                       {{/if}} 
 
                        <a class="uk-button uk-button-default saved-recipes-btn " href="#modal-overflow" uk-toggle>Saved Recipes</a>
 
