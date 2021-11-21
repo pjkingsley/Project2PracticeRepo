@@ -1,27 +1,22 @@
-// const renderLogin = document.location.replace("/profile");
-
-// document
-//   .getElementById("log")
-//   .addEventListener("click", res.render("/profile"));
-
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const email = document.querySelector("#userEmail").value.trim();
-  const password = document.querySelector("#userPassword").value.trim();
+  const email = document.querySelector("#email").value.trim();
+  const password = document.querySelector("#password").value.trim();
   //from profile.js mini project
   if (email && password) {
     // Send a POST request to the API endpoint
     const response = await fetch("/api/users/login", {
       method: "POST",
       body: JSON.stringify({ email, password }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
 
     if (response.ok) {
       console.log("login success");
-      //getElementById(hamburger button display)
-      //getElementByID(display logout button)
     } else {
       alert(response.statusText);
     }

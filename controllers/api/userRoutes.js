@@ -1,21 +1,17 @@
-console.log("check 2");
-
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 const { UserProfile } = require("../../models");
-//This route is /api/users/
+//This route is /api/users/profile
+
 router.post("/profile", async (req, res) => {
   try {
-    console.log(req.body, "string");
+    console.log(req.body, "from api/users/profile route");
 
     const userProfileData = await UserProfile.create({
       email: req.body.email,
       password: req.body.password,
     });
 
-    // req.session.save(() => {
-    //   req.session.userProfile_id = userProfileData.id;
-    //   req.session.logged_in = true;
     console.log("user Profile Data");
     res.status(200).json(userProfileData);
   } catch (err) {
@@ -26,8 +22,9 @@ router.post("/profile", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
+    console.log("try of router.post(/login) reached)");
     const userProfileData = await UserProfile.findOne({
-      where: { email: req.body.email },
+      where: {email: req.body.email } 
     });
 
     if (!userProfileData) {
@@ -52,7 +49,7 @@ router.post("/login", async (req, res) => {
       req.session.logged_in = true;
 
       res.json({
-        userProfile: userProfileData,
+        user: userProfileData,
         message: "You are now logged in!",
       });
     });
