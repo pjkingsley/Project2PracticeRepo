@@ -2,13 +2,16 @@ console.log("check 2");
 
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
-const { UserProfile } = require('../../models');
+const { UserProfile } = require("../../models");
 //This route is /api/users/
 router.post("/profile", async (req, res) => {
   try {
     console.log(req.body, "string");
 
-    const userProfileData = await UserProfile.create({email:req.body.email, password:req.body.password}, );
+    const userProfileData = await UserProfile.create({
+      email: req.body.email,
+      password: req.body.password,
+    });
 
     // req.session.save(() => {
     //   req.session.userProfile_id = userProfileData.id;
@@ -19,6 +22,7 @@ router.post("/profile", async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 router.post("/login", async (req, res) => {
   try {
@@ -83,8 +87,20 @@ router.get("/signup", async (req, res) => {
     res.render("signup");
   } catch (err) {
     res.status(500).json(err);
+
   }
 });
+
+
+router.get("/loginpage", async (req, res) => {
+  try {
+    res.render("loginpage");
+    console.log("login route reached");
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 //GET Spoonacular API call
 
