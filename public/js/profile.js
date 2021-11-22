@@ -13,7 +13,7 @@ const createUserProfile = async (event) => {
     console.log("anyString");
     const response = await fetch("/api/users/profile", {
       method: "POST",
-      body: JSON.stringify({ email, password, password_confirm }),
+      body: JSON.stringify({ email, password }),
       headers: {
         "Content-Type": "application/json",
       },
