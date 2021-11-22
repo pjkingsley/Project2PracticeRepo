@@ -62,14 +62,17 @@ router.post("/login", async (req, res) => {
 
 //Logout route
 router.post("/logout", (req, res) => {
-  if (req.session.logged_in) {
-    req.session.destroy(() => {
-      res.status(204).end();
+  if (req.body.logged_in) {
+    req.body.destroy(() => {
+       res.status(204);
     });
   } else {
-    res.status(404).end();
+    res.status(404);
   }
 });
+  
+  
+   
 // Create a new user
 router.post("/", async (req, res) => {
   try {
