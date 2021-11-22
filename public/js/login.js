@@ -28,11 +28,4 @@ const loginFormHandler = async (event) => {
 
 document.querySelector("#login").addEventListener("click", loginFormHandler);
 
-//     What do we want to display when user logs in?
-//     if (response.ok) {
-//       // If successful, redirect the browser to the profile page
-//       document.location.replace("/profile");
-//     } else {
-//       alert(response.statusText);
-//     }
-//   }
+
