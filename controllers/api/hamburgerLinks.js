@@ -40,7 +40,7 @@ router.get("/RecipeLogged", async (req, res) => {
 //about us link
 router.get("/aboutUs", async (req, res) => {
   try {
-    res.render("aboutus");
+    res.render("aboutus", { loggedIn: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
