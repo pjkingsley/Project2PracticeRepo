@@ -12,7 +12,7 @@ const router = require("express").Router();
 //CommunityCookbook link
 router.get("/communityCookbook", async (req, res) => {
   try {
-    res.render("communityCookbook");
+    res.render("communityCookbook", { loggedIn: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -21,7 +21,7 @@ router.get("/communityCookbook", async (req, res) => {
 // Recipe link, no login
 router.get("/submitRecipe", async (req, res) => {
   try {
-    res.render("renderRecipeCard-noLogin");
+    res.render("renderRecipeCard-noLogin", { loggedIn: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -49,7 +49,7 @@ router.get("/aboutUs", async (req, res) => {
 //donation page link
 router.get("/donations", async (req, res) => {
   try {
-    res.render("donationPage");
+    res.render("donationPage", { loggedIn: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
