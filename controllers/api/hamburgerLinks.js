@@ -21,7 +21,7 @@ router.get("/communityCookbook", async (req, res) => {
 // Recipe link, no login
 router.get("/submitRecipe", async (req, res) => {
   try {
-    res.render("renderRecipeCard-noLogin", { loggedIn: req.session.logged_in });
+    res.render("submission", { loggedIn: req.session.logged_in });
   } catch (err) {
     res.status(500).json(err);
   }
