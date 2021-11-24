@@ -11,7 +11,7 @@ const createCommunityRecipe = async (event) => {
 
   const ccInstructions = document.querySelector("#ccInstructions").value.trim();
 
-  if (ccTitle && ccIngredients && ccInstructions) {
+  if (ccTitle && ccDescription && ccIngredients && ccInstructions) {
     const response = await fetch("/api/com_cookbook/createRecipe", {
       method: "POST",
       body: JSON.stringify({
