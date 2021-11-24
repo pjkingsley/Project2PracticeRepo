@@ -28,6 +28,10 @@ const createCommunityRecipe = async (event) => {
     if (response.ok) {
       console.log("Recipe stored in Database");
       alert("Thank you for your submission!")
+      ccTitle.value = '';
+      ccDescription.value = '';
+      ccIngredients.value = '';
+      ccInstructions.value = '';
     } else {
       console.log(response);
       alert(response.statusText);

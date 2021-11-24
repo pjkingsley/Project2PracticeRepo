@@ -238,7 +238,7 @@ footer{
     color: var(--dp-red);
  }
 
-#login, #signup, #button1, #button2, #button3,#submitrecipe{
+#login, #signup, #button1, #button2, #button3,#ccSubmit{
     font-family: var(--display-font);
     background-color: var(--white);
     color: var(--blk);
