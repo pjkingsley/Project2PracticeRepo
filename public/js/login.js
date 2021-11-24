@@ -25,7 +25,12 @@ const loginFormHandler = async (event) => {
     }
   }
 };
+const signUp = function (event) {
+  event.preventDefault();
+  document.location.replace('/signup');
+};
 
+document.querySelector('#signUp').addEventListener('click', signUp);
 document.querySelector("#login").addEventListener("click", loginFormHandler);
 
 
