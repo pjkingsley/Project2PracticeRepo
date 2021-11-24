@@ -71,7 +71,7 @@ router.post("/logout", (req, res) => {
   }
 });
   
-  
+
    
 // Create a new user
 router.post("/", async (req, res) => {
@@ -93,6 +93,13 @@ router.get("/signup1", async (req, res) => {
   }
 });
 
+router.get('/signup', async (req, res) => {
+  try {
+    res.render('signup');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 router.get("/loginpage", async (req, res) => {
   try {
