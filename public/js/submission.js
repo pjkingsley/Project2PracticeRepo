@@ -27,6 +27,7 @@ const createCommunityRecipe = async (event) => {
 
     if (response.ok) {
       console.log("Recipe stored in Database");
+      alert("Thank you for your submission!")
     } else {
       console.log(response);
       alert(response.statusText);

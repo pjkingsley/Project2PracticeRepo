@@ -248,7 +248,7 @@ footer{
     border-radius: 10px;
 }
 
-#login:hover, #signup:hover,#button1:hover, #button2:hover, #button3:hover,#submitrecipe:hover{ 
+#login:hover, #signup:hover,#button1:hover, #button2:hover, #button3:hover,#ccSubmit:hover{ 
     color:var(--white);
     background-color: rgb(252, 185, 122);
 }
@@ -260,7 +260,7 @@ footer{
     background-color: var(--lt-grey);
 }
 
-#submitrecipe{
+#ccSubmit{
 color:var(--white);
 background-color: var(--dp-red);
 }
