@@ -14,7 +14,7 @@ document.getElementById('food')
     });
 
 const retrieveRecipes = async () => {
-    const result = await fetch ('/api/comCookbook', {
+    const result = await fetch ('/api/comCookbook/recipes', {
         method: 'GET',
     });
     const json = await result.json();

@@ -29,7 +29,7 @@ router.put("/com_recipes/:id", withAuth, async (req, res) => {
 });
 
 //get community cookbook recipes associated with user ID
-router.get("/", async (req, res) => {
+router.get("/recipes", async (req, res) => {
   try {
     const recipes = await CommunityRecipes.findAll(recipes);
     res.status(200).json(recipes);
