@@ -20,7 +20,7 @@ router.get("/communityCookbook", async (req, res) => {
       return json;
   };
   
-  const renderRecipe = (recipe) => {
+    const renderRecipe = (recipe) => {
       const card = document.createElement('div');
       const cardTitle = document.createElement('div');
       const cardDescription = document.createElement('div');
@@ -43,7 +43,7 @@ router.get("/communityCookbook", async (req, res) => {
   
     retrieveRecipes().then((response) => response.forEach((recipe) => 
       renderRecipe(recipe)));
-    res.render("communityCookbook", { loggedIn: req.session.logged_in });
+    res.render("communityCookbook");
   } catch (err) {
     res.status(500).json(err);
   }
