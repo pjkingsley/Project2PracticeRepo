@@ -14,10 +14,10 @@ document.getElementById('food')
     });
 
 const retrieveRecipes = async () => {
-    const result = await fetch ('/api/com_cookbook', {
+    const result = await fetch ('/api/comCookbook', {
         method: 'GET',
     });
-    const json = await result.jason();
+    const json = await result.json();
     return json;
 };
 
