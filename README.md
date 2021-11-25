@@ -32,5 +32,5 @@ Aim of the project is to give users best possible recipes based on the ingredien
 ![image](screenshots/screenshot-5.png)
 
 Live Deployed link:
-https://hidden-wave-52088.herokuapp.com/api/u/homepage
+https://hidden-wave-52088.herokuapp.com/
 
