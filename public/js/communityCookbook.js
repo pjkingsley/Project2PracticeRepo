@@ -40,8 +40,7 @@ const renderRecipe = (recipe) => {
     cardInstructions.innerHTML = `${recipe.instructions}`;
 };
 
-const cardMaker = () =>
-    retrieveRecipes().then((response) => response.forEach((recipe) => 
-    renderRecipe(recipe)));
 
-document.onload.cardMaker();
+
+retrieveRecipes().then((response) => response.forEach((recipe) => 
+    renderRecipe(recipe)));
