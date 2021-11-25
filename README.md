@@ -3,7 +3,7 @@ FoodLess
 
 
 ### Description: ###
-Our website is a recipe search tool that allows the user to find recipes with ingredients the user already possesses in their pantry or refrigerator. The user will be able toenter one or multiple ingredients into the search bar simultaneously and obtain search results from various sources across the web with recipes containing the aforementioned ingredients. The user is able to login and save recipes to their account. 
+Our website is a recipe search tool that allows the user to find recipes with ingredients the user already possesses in their pantry or refrigerator. The user will be able to enter one or multiple ingredients into the search bar simultaneously and obtain search results from various sources across the web with recipes containing the aforementioned ingredients. The user is able to login and save recipes to their account. 
 
 
 
@@ -33,4 +33,5 @@ Aim of the project is to give users best possible recipes based on the ingredien
 
 Live Deployed link:
 https://hidden-wave-52088.herokuapp.com/
+https://github.com/pjkingsley/Project2PracticeRepo/edit/main/README.md
 
